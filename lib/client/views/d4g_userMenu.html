@@ -1,29 +1,31 @@
 <template name="d4g_userMenu">
   {{#if isLoggedIn}}
-    <div class="user-menu dropdown header-submodule">
-      <a class="view dropdown-top-level" href="/">{{name}}</a>
-      <div class="dropdown-menu">
-        <ul role="menu" aria-labelledby="dLabel">
-          {{#if isAdmin}}
-          <li><a href="{{pathFor 'posts_pending'}}">Pending Posts</a></li>
-          <li><a href="{{pathFor 'praise'}}">Praise</a></li>
-          <li><a href="{{pathFor 'praise_list'}}">Praise Manage</a></li>
-          <li><a href="{{pathFor 'praise_submit'}}">Praise New</a></li>
-          {{/if}}
-          <li><a href="{{profileUrl}}">View My Profile</a></li>
-          <li><a href="{{userEditUrl}}">Edit Account</a></li>
-          {{#if isAdmin}}
-          <li><a href="{{pathFor 'users'}}">Users</a></li>
-          <li><a href="{{pathFor 'categories'}}">Categories</a></li>
-          <li><a href="{{pathFor 'settings'}}">Settings</a></li>
-          <li><a href="{{pathFor 'searchLogs'}}">Search Logs</a></li>
-          {{/if}}
-          <li><a href="/sign-out">Sign Out</a></li>
-        </ul>
+      <div class="user-menu dropdown header-submodule">
+          <a class="view dropdown-top-level" href="/">{{name}}</a>
+
+          <div class="dropdown-menu">
+              <ul role="menu" aria-labelledby="dLabel">
+                {{#if isAdmin}}
+                    <li><a href="{{pathFor 'posts_pending'}}">Pending Posts</a></li>
+                    <li><a href="{{pathFor 'praise'}}">Praise</a></li>
+                    <li><a href="{{pathFor 'praise_list'}}">Praise Manage</a></li>
+                    <li><a href="{{pathFor 'praise_submit'}}">Praise New</a></li>
+                {{/if}}
+                  <li><a href="{{profileUrl}}">View My Profile</a></li>
+                  <li><a href="{{userEditUrl}}">Edit Account</a></li>
+                {{#if isAdmin}}
+                    <li><a href="{{pathFor 'users'}}">Users</a></li>
+                    <li><a href="{{pathFor 'categories'}}">Categories</a></li>
+                    <li><a href="{{pathFor 'settings'}}">Settings</a></li>
+                    <li><a href="{{pathFor 'searchLogs'}}">Search Logs</a></li>
+                {{/if}}
+                  <li><a href="/sign-out">Sign Out</a></li>
+                  <li><a class="account-link map" href="/map">Map</a></li>
+              </ul>
+          </div>
       </div>
-    </div>
   {{else}}
-    <a class="account-link sign-in" href="/sign-in">Login</a>
-    <a class="account-link sign-up" href="/register">Register</a>
+      <a class="account-link sign-in" href="/sign-in">Login</a>
+      <a> class="account-link sign-up" href="/register">Register</a>
   {{/if}}
 </template>

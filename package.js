@@ -32,6 +32,7 @@ Package.onUse(function (api) {
     'telescope-settings',
     'telescope-tags',
     'iron:router',
+    'http',
     'aldeed:collection2',
     'aldeed:simple-schema',
     'aldeed:autoform',
@@ -97,7 +98,9 @@ Package.onUse(function (api) {
     'lib/client/views/d4g_post_submit_form.html',
     'lib/client/views/d4g_post_submit_form.js',
     'lib/client/views/d4g_post_submit.html',
+    'lib/client/views/d4g_post_submit.js', //overwrites post_submit.js
     'lib/client/views/d4g_post_edit.html',
+    'lib/client/views/d4g_post_edit.js', //overwrites post_edit.js
     'lib/client/views/d4g_button_bar.html',
     'lib/client/views/d4g_user_profile.html',
     'lib/client/views/d4g_userInfo.html',
@@ -108,6 +111,7 @@ Package.onUse(function (api) {
     'lib/client/views/d4g_newsletter_signup.html',
     'lib/client/views/d4g_newsletter_signup.js',
     'lib/client/views/custom_templates.js',
+    'lib/client/views/d4g_map.html',
 
 
     // Pages
